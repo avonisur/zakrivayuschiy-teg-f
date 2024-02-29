@@ -17,4 +17,461 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' 400 700 'wdth' 116.667;
+  background-color: var(--light-theme-background-color);
+  background-image: var(--background-image-light);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+/* header */
+
+.header {
+  font-family: var(--accent-font-family);
+  background-color: var(--light-theme-background-color);
+  border: 2px solid var(--light-theme-accent-color);
+  max-width: var(--max-container-width);
+  margin: 102px auto 100px;
+}
+
+/* header title */
+
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block-start: 136px;
+  gap: 20px; 
+}
+
+.title-decoration {
+  font-size: 65px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+/* header menu */
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+  margin-block: 23px;
+  padding-inline-start: 15px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* button header */
+
+.theme-menu__button {
+  position: relative;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.theme-menu__button:disabled:before {
+  content: '▶';
+  position: absolute;
+  left: -14px;
+  animation-name: arrow;
+	animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes arrow {
+  from {
+    left: -16px;
+  }
+  to {
+    left: -20px;
+  }
+}
+
+.theme-menu__button:disabled {
+  color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color ease 0.3s;
+}
+
+.theme-menu__button:active {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color ease 0.3s;
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
+  color: rgba(0, 0, 0, 0.6);
+  transition: color ease 0.3s;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #00000060;
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+/* main */
+
+.main__container {
+  margin: 0 auto;
+  margin-block-start: 50px;
+  background-color: var(--light-theme-background-color);
+  border: 2px solid var(--light-theme-accent-color);
+  max-width: var(--max-container-width);
+}
+
+.main__title {
+  padding-inline-start: 10px;
+  padding-block: 5px;
+  display: flex;
+  align-items: center;
+  font-size: var(--main-font-size);
+  font-weight: var(--title-font-weight);
+  border-block-end: 2px solid var(--light-theme-accent-color);
+}
+
+.main__img_container {
+  position: relative;
+}
+
+.main__img_label {
+  right: 22px;
+  top: 29px;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  text-shadow: 1px var(--text-stroke-light-theme);
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+}
+
+@supports (-webkit-text-stroke: 1px var(--text-stroke-light-theme)) {
+  .main__img_label {
+    -webkit-text-stroke: 1px var(--text-stroke-light-theme);
+  }
+}
+
+.main_img {
+  display: block;
+  width: 100%;
+}
+
+.main__text_container {
+  padding-inline: 25px;
+  padding-block: 25px;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 27px;
+  border-block-start: 2px solid var(--light-theme-accent-color);
+}
+
+.main__text {
+  font-size: var(--main-font-size);
+}
+/* buttom like */
+
+.main__like-button-icon_container {
+  display: flex;
+  justify-content: end;
+  padding-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.card__like-button {
+  display: flex;
+  align-items: center;
+  padding-inline: 35px;
+  padding-block: 12.5px;
+  position: relative;
+  overflow: hidden;
+  background-color: inherit;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--light-theme-accent-color);
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--light-theme-accent-color);
+  transition: .5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.card__like-button:hover::before {
+  transform: translateX(0%);
+}
+
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px var(--light-theme-accent-color);
+  transition: ease 0.3s;
+}
+
+.card__icon-button {
+  background-color: inherit;
+  cursor: pointer;
+  height: 41px;
+  border: 2px solid transparent;
+  padding-inline: 0;
+  margin-inline-end: 3px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--light-theme-accent-color);
+}
+
+.like-icon {
+  height: 38px;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 90%;
+  display: flex;
+  justify-content: center;
+  width: 56px;
+  color: var(--light-theme-background-color);
+  mix-blend-mode: difference;
+}
+
+/* heart */
+.sparks {
+  opacity: 0;
+}
+
+/* buttom save */
+
+.save-button__container {
+  margin: 0 auto;
+  max-width: 335px;
+  max-height: 84px;
+  margin-block-start: 50px;
+  
+  margin-block-end: 102px;
+  background-color: var(--light-theme-background-color);
+  border: 2px solid var(--light-theme-accent-color);
+
+}
+
+.save-button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  min-height: 51px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  padding-block: 15px;
+  padding-inline: 0;
+}
+
+.save-button:hover::before {
+  transform: translateX(0%);
+}
+
+.save-button:focus-visible {
+  transition: ease-in-out 0.5s;
+  box-shadow: 4px 4px var(--light-theme-accent-color);
+}
+
+.save-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--light-theme-accent-color);
+  transition: .5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.save-button__text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  color: var(--light-theme-background-color);
+  mix-blend-mode: difference;
+}
+
+.floppy-icon {
+  position: relative;
+  z-index: 1;
+  width: 21px;
+  color: var(--light-theme-background-color);
+  mix-blend-mode: difference;
+}
+
+
+/* Modal window */
+.save-button__modal-container {
+  padding: 32px;
+  max-width: 357px;
+  border: 2px solid var(--light-theme-accent-color);
+}
+
+.save-button__modal-container::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.modal-window {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.floppy-icon__modal {
+  width: 39px;
+}
+
+.modal-button__title {
+  line-height: 90%;
+  text-transform: uppercase;
+}
+
+.modal-title {
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.modal-window__info {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.save-button__modal-container:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-window__close-button {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  padding-block-start: 11px;
+  padding-block-end: 9px;
+  padding-inline: 17px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--light-theme-accent-color);
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.modal-window__close-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--light-theme-accent-color);
+  transition: .5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.modal-window__close-button:hover::before {
+  transform: translateX(0%);
+}
+
+
+
+/* медиа для ТЕЛЕФОНОВ */
+
+@media (width <= 375px) {
+
+
+  .main__container {
+    margin-block-start: 50px;
+    width: 100%;
+  }
+  
+  .title-decoration {
+    font-size: 49px;
+  }
+
+  .title {
+    font-size: 14px;
+    }
+  
+  .title__container {
+    margin-block-start: 120px;
+  }
+
+  .floppy-icon {
+    width: 28px;
+  }
+  
+  .save-button {
+    flex-direction: column;
+  }
+  
+  .save-button__container {
+    max-width: 312px;
+    max-height: 82px;
+  }
+
+  .save-button__modal-container {
+    max-width: 341px;
+  }
+
+   .main__img_label {
+    right: 11px;
+    top: 25px;
+  } 
+
+
 }
