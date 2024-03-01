@@ -280,7 +280,7 @@
   justify-content: center;
   width: 56px;
   color: var(--accent-color);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 /* heart */
@@ -347,7 +347,7 @@
   font-family: var(--accent-font-family);
   font-size: 14px;
   color: var(--accent-color);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .floppy-icon {
@@ -355,7 +355,7 @@
   z-index: 1;
   width: 21px;
   color: var(--accent-color);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 

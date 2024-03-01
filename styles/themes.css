@@ -160,9 +160,9 @@
         --text-font-weight: 465;
    
         --background-image:
-        repeating-linear-gradient(90deg, #000, #00000000 2px),
-        repeating-linear-gradient(180deg, #000, #ffffff00 2px),
-        linear-gradient(#007f0c, #004306);
+        repeating-linear-gradient(90deg, #000, transparent 2px),
+        repeating-linear-gradient(180deg, #000, transparent 2px),
+        linear-gradient(#007f0c 0.01%, #004306);
       }
     }
 

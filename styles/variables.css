@@ -26,7 +26,5 @@
     --min-main-container-height: 224px;
 
     /* heart */
-  --heart-color-contour: #000;
-  --heart-color-core: #000;
-  --heart-color-main-body: #FF0000;
+     --heart-color-main-body: #FF0000;
     }
