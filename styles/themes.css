@@ -11,6 +11,9 @@
         linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
+.theme-light .button__text {
+    color: var(--background-color);
+}
 /* dark theme */
 
 :root.theme-dark {
@@ -164,10 +167,14 @@
         repeating-linear-gradient(180deg, #000, transparent 2px),
         linear-gradient(#007f0c 0.01%, #004306);
       }
-    }
+    
 
     .save-button__modal-container::backdrop {
         background-color: var(--background-color);
         opacity: 0.75;
       }
-
+    
+    .button__text {
+        color: var(--accent-color);
+    }
+}
