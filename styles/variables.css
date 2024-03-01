@@ -10,21 +10,21 @@
     /* themes */
     --background-color: #fff;
     --accent-color: #000;
+    --button-text: #fff;
     --title-font-weight: 700;
     --text-font-weight: 400;
    
 
     /* background-image */
     --background-image:
-        repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-        repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
-        linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    
     
     /* containers */
     --max-container-width: 700px;
-    --min-header-container-height: 327px;
-    --min-main-container-height: 224px;
 
     /* heart */
      --heart-color-main-body: #FF0000;
-    }
+}
