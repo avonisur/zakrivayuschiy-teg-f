@@ -18,7 +18,7 @@
   }
   
   .contour {
-    fill: var(--light-theme-accent-color);
+    fill: var(--accent-color);
   }
   
   .main-body {
@@ -27,7 +27,7 @@
     transition-delay: 0.05s;
   }
   .heart:hover .main-body {
-    fill: var(--light-theme-accent-color);
+    fill: var(--accent-color);
     transition-duration: .3s;
   }
   .heart:active .main-body {
@@ -39,7 +39,7 @@
     transition: fill .3s ease;
   }
   .heart:hover .core {
-    fill: var(--light-theme-accent-color);
+    fill: var(--accent-color);
     transition-duration: .3s;
   }
   .heart:active .core {
@@ -47,7 +47,7 @@
   }
   
   .sparks {
-    fill: var(--heart-color-sparks);
+    fill: var(--heart-color-main-body);
   }
   
   /* like-icon */
@@ -104,11 +104,11 @@
   
   /* dark theme */
   .theme-dark .contour {
-    fill: var(--dark-theme-accent-color);
+    fill: var(--accent-color);
   }
   
   @media (prefers-color-scheme: dark) {
     .contour {
-      fill: var(--dark-theme-accent-color);
+      fill: var(--accent-color);
     }
   }
